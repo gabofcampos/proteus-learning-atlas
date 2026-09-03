@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/01_iterators_vs_generators.md.md",
+                "file": "01_python/01_iterators_vs_generators.md.md",
                 "mode": "source",
                 "source": false
               },
@@ -196,11 +196,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "73a90219314146ac",
+  "active": "4ab3ef1b61b25187",
   "lastOpenFiles": [
     "04_sql/HAVING vs WHERE.md",
     "04_sql",
-    "00_inbox/01_iterators_vs_generators.md.md",
+    "01_python/01_iterators_vs_generators.md.md",
     "00_inbox/ToDo.md.md",
     "02_data_modeling",
     "01_python",
