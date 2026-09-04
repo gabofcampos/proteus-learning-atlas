@@ -36,20 +36,6 @@
             }
           },
           {
-            "id": "dfd92deb3eda1a57",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_python/01_pyspark/collect() vs take() vs show().md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "collect() vs take() vs show()"
-            }
-          },
-          {
             "id": "f57764343b3d501e",
             "type": "leaf",
             "state": {
@@ -64,21 +50,21 @@
             }
           },
           {
-            "id": "ed2ff283ef783c57",
+            "id": "5d34c78aeae8c9e6",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "01_python/00_general/01_iterators_vs_generators.md.md",
-                "bFile": "01_python/00_general/01_iterators_vs_generators.md.md",
-                "aRef": ""
+                "file": "03_data_engineering/01_spark/salting hot keys.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: 01_iterators_vs_generators.md  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "salting hot keys"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -253,10 +239,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ed2ff283ef783c57",
+  "active": "5d34c78aeae8c9e6",
   "lastOpenFiles": [
-    "03_data_engineering/01_spark/salting hot keys.md",
     "03_data_engineering/01_spark/data skew.md",
+    "03_data_engineering/01_spark/salting hot keys.md",
+    "03_data_engineering/01_spark/pre-aggregating before shuffle.canvas",
+    "Untitled.canvas",
     "03_data_engineering/01_spark/00_spark basics.md",
     "04_sql/HAVING vs WHERE.md",
     "01_python/01_pyspark/collect() vs take() vs show().md",
