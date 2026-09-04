@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_data_engineering/01_spark/skew aware join or aggregation techniques.md",
+                "file": "00_inbox/ToDo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "skew aware join or aggregation techniques"
+              "title": "ToDo"
             }
           }
         ],
@@ -213,10 +213,10 @@
   },
   "active": "186921a295f85298",
   "lastOpenFiles": [
+    "03_data_engineering/01_spark/skew aware join or aggregation techniques.md",
     "03_data_engineering/01_spark/pre-aggregating before shuffle.md",
     "03_data_engineering/01_spark/salting hot keys.md",
     "03_data_engineering/01_spark/data skew.md",
-    "03_data_engineering/01_spark/skew aware join or aggregation techniques.md",
     "skew aware joins",
     "03_data_engineering/01_spark/pre-aggregating before shuffle.canvas",
     "03_data_engineering/01_spark/00_spark basics.md",
