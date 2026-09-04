@@ -1,5 +1,7 @@
 technique to mitigate data skewing.
 
+> **when to use:** useful when one/few grouping keys are extremely hot.
+
 *example*
 ```md
 US, search -> 1.8 billion rows

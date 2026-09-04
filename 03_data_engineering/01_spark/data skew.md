@@ -14,5 +14,5 @@ when grouping this could cause the task handling that partition to be far slower
 ## how to mitigate this?
 - rethink partitioning keys
 - [[salting hot keys]]
-- [[pre-aggregating before shuffle.canvas]]
-- using skew aware join/aggregation techniques
+- [[pre-aggregating before shuffle]]
+- [[skew aware join or aggregation techniques]]
