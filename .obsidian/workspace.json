@@ -20,6 +20,16 @@
               "icon": "lucide-file",
               "title": "qdrant"
             }
+          },
+          {
+            "id": "9e3d62179af54c50",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
           }
         ]
       }
@@ -198,8 +208,12 @@
   },
   "active": "328ea4fa5d1160dd",
   "lastOpenFiles": [
-    "Untitled.md",
+    "notebooks/corporate_rag/corporate_rag.md",
+    "05_ai/langgraph.md",
+    "notebooks/corporate_rag/rag_stack_skeleton_exec.ipynb",
+    "notebooks/corporate_rag",
     "05_ai/qdrant.md",
+    "Untitled.md",
     "2026-09-08.md",
     "Untitled.canvas",
     "Untitled 2.canvas",
@@ -207,7 +221,6 @@
     "Untitled 1.canvas",
     "README.md",
     "notebooks/rag_stack_skeleton_exec.ipynb",
-    "05_ai/langgraph.md",
     "05_ai/langfuse.md",
     "notebooks",
     "05_ai",
@@ -224,8 +237,6 @@
     "01_python/00_general",
     "01_python/01_pyspark",
     "03_data_engineering/01_spark",
-    "04_sql",
-    "02_data_modeling",
-    "01_python"
+    "04_sql"
   ]
 }
