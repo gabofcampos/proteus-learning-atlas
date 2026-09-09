@@ -19,7 +19,29 @@ each dimension captures a specific aspect of the data it represents. So a high l
 
 ## similarity or how closeness is measured
 
-todo
+technically, vector similarity is the mathematical process of measuring how close those vectors are within the multi-dimensional space. **If the vectors are close in the space, then they are semantically similar, if they are apart the data is unrelated**.
+
+three common similar methods to measure closeness:
+
+#### 1. cosine similarity
+
+ ==measures the angle between vectors **regardless of their magnitude**.==
+ 
+ because the size of the vectors is not taken into account, this method is useful when the scale of the compared vectors does not play a role in the search (ex.: *searching across docs might for a specific piece of info has nothing to do with the size of the docs*).
+
+downside: this obliviousness towards a difference in vector scale can be a limiting factor depending on the context.
+
+Cosine similarity is always in the interval ([-1, 1]):
+- **cos_sim = 1**: The angle (θ) is 0, meaning the vectors point in the same direction (one is a positive scalar multiple of the other). 
+- **cos_sim = 0**: The angle (θ) is 90 degrees, meaning the vectors are orthogonal, which often indicates they are unrelated in context.
+- **cos_sim = -1**: The angle (θ) is 180 degrees, meaning the vectors are aligned but point in opposite directions.
+
+![[Pasted image 20260909172048.png|398]]
+#### 2. dot product 
+
+
+#### 3. euclidian distance
+
 
 ## how vector databases work
 todo
