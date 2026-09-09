@@ -24,7 +24,7 @@ Used in [[agent_with_memory]] to store ...
 
 ## Related
 
-- [[Vector Databases]]
+- [[vector databases]]
 - [[Embeddings]]
 - [[RAG]]
 - [[notebooks/rag_stack_skeleton_exec.ipynb]]

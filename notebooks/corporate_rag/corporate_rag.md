@@ -16,6 +16,6 @@ this was done as an experiment to understand core concepts around:
 
 - [[LLM Agents]]
 - [[RAG]]
-- [[Vector Databases]]
+- [[vector databases]]
 - [[LLM Observability]]
 
