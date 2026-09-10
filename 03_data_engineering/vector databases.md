@@ -66,19 +66,23 @@ because euclidian measures the distance, the closer the vectors (more similar) t
 ## how vector databases work
 ### loading and creating data
 1. **embed:** pass raw data (text, images, audio, video...) through an embedding model to get a vector per item.
-2. **attach metadata:** add metadata to each of the embeddings (source, id, any field that you might want to filter on). This allows you to combine similarity search with regular search.
+2. **attach metadata:** add metadata to each of the embeddings . This allows you to combine similarity search with regular search (`where lang = 'es'`).
+`{"source": "name_source.pdf", "page": 4, "lang": "es"}`)`
 3. **insert into a collection:** the vector + payload get stored. the db updates its index as each item comes in. **indexing does not happen at a separate step, it happens *during insertion***. while bulk loading a dataset, indexing will take time to build, can be slower than you might expect.
+
+#### indexing
+
 
 ### the search
 let's say there is a vector database with a set of vectors already stored.
 a user queries said db, what happens then?
-1. **vectorization:** 
-2. **vector indexing:**
-3. **query execution:**
+1. **vectorization:** the query is vectorized/embedded using the **same** model used to create the database.
+2. **vector indexing:** instead of comparing the created query vector against all stored embeddings, the **db walks the index built at insertion to jump into the region in space where it is likely to find similar vectors.** This way it skips most of the dataset, but since it is approximating a region in space, **the result might be a similar match but not the closest match.** 
+3. **query execution:** once a similar region has been found, candidates from that region get scored against the query vector using a similarity method, payload filters get applied and top-k results are returned ranked.
 
 ## when to use vector databases?
 most common use cases:
-- **large language models*
+- **large language models**
 - **image recognition:** used in e-commerce to find similar items, social media as recommendation system. Used also in facial recognition.
 - **natural language processing:** used in the storage and retrieval of word representation for NLP. Semantic search.
 - **fraud detection:** in the detection of fraudulent transactions through similarity with known fraud patterns.
