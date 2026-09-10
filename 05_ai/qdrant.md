@@ -14,7 +14,7 @@ used to store and retrieve vectors based on similarity.
 
 ## How I used it
 
-Used in [[agent_with_memory]] to store ...
+Used in [[corporate_rag]] to store ...
 
 ## Things I didn't understand
 

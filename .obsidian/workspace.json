@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "ToDo"
             }
+          },
+          {
+            "id": "c2ade0792c4deebb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -198,17 +213,21 @@
   },
   "active": "4ab3ef1b61b25187",
   "lastOpenFiles": [
+    "agents/proteus-learning-atlas -  todo audit from the obsidian graph.md",
+    "README.md",
+    "00_inbox/ToDo.md",
+    "agents",
+    "notebooks/corporate_rag/corporate_rag.md",
+    "RAG.md",
     "05_ai/qdrant.md",
+    "agent_with_memory.md",
     "03_data_engineering/vector databases.md",
     "images/vector_databases_hnsw.png",
     "images/cosine_similarity_computation.png",
     "images/Pasted image 20260909171642.png",
     "images/skip_list.png",
     "images",
-    "00_inbox/ToDo.md",
     "03_data_engineering/02_spatial_data_engineering",
-    "Untitled.md",
-    "notebooks/corporate_rag/corporate_rag.md",
     "03_data_engineering/01_spark/data skew.md",
     "05_ai/langgraph.md",
     "notebooks/corporate_rag/rag_stack_skeleton_exec.ipynb",
@@ -217,7 +236,6 @@
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas",
-    "README.md",
     "notebooks/rag_stack_skeleton_exec.ipynb",
     "05_ai/langfuse.md",
     "notebooks",
@@ -231,7 +249,6 @@
     "04_sql/HAVING vs WHERE.md",
     "01_python/01_pyspark/collect() vs take() vs show().md",
     "01_python/00_general/01_iterators_vs_generators.md.md",
-    "01_python/00_general",
-    "01_python/01_pyspark"
+    "01_python/00_general"
   ]
 }
