@@ -36,8 +36,8 @@ cosine similarity is always in the interval ([-1, 1]):
 - **cos_sim = 1**: The angle (θ) is 0, meaning the vectors point in the same direction (one is a positive scalar multiple of the other). 
 - **cos_sim = 0**: The angle (θ) is 90 degrees, meaning the vectors are orthogonal, which often indicates they are unrelated in context.
 - **cos_sim = -1**: The angle (θ) is 180 degrees, meaning the vectors are aligned but point in opposite directions.
+<img src="../images/cosine_similarity_computation.png" width="398" alt="cosine similarity computation">
 
-![[cosine_similarity_computation.png|398]]
 #### 2. dot product or inner product
 
 ==measures both similarity and magnitude of vectors.==
@@ -80,10 +80,12 @@ vector indexes are created as part of a vector db to speed vector search by usin
 ##### techniques
 1. **inverted files (ivf):** *(basic indexing)* splits embeddings into clusters by means of clustering techniques like k-means clustering. This way, when a new query comes, the system identifies the nearest or most similar cluster and searches only within that cluster. **common in FAISS/pgvector.**
 2. **hierarchical navigable small world (hnsw):** *(complex technique born from skip list+nsw technique)* a multilayer graph of vectors is built so search can hop toward the neighborhood of the query instead of scanning linearly. **used by qdrant by default.**
+	![[vector_databases_hnsw.png]]
 		- ***NSW:*** technique where proximate graph nodes are linked together based on similarity. There is an pre-defined entry point connected to multiple nodes. Greedy search is used to search for the nearest neighbor point.  So we enter through the entry node, find across all linked nodes the one closest to our query vector, and move onto that one. This process repeats until there is no node more similar to our query vector than the one we are currently in.
 		- **skip list:** probabilistic data structure based off of linked lists.
 			`provides average \(O(\log n)\) time complexity for search, insertion, and deletion operations.`
-			![[skip_list.png|506]]
+			![skip_list](../images/skip_list.png)
+
 
 
 ### the search
