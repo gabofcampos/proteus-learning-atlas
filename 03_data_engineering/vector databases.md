@@ -64,8 +64,11 @@ because euclidian measures the distance, the closer the vectors (more similar) t
 3. **euclidian distance:** clustering, anomaly detection, and applications where absolute differences in feature values matter. Works well for count-based features and spatial data.
 
 ## how vector databases work
-todo
 ### loading and creating data
+1. **embed:** pass raw data (text, images, audio, video...) through an embedding model to get a vector per item.
+2. **attach metadata:** add metadata to each of the embeddings (source, id, any field that you might want to filter on). This allows you to combine similarity search with regular search.
+3. **insert into a collection:** the vector + payload get stored. the db updates its index as each item comes in. **indexing does not happen at a separate step, it happens *during insertion***. while bulk loading a dataset, indexing will take time to build, can be slower than you might expect.
+
 ### the search
 let's say there is a vector database with a set of vectors already stored.
 a user queries said db, what happens then?
@@ -90,3 +93,9 @@ if your dataset is small enough that brute force cosine similarity over a numpy 
 - **weavite**: dedicated vector DB, built in modules for embedding generation, hybrid search.`
 - **milvus**: dedicated vector DB, built for large-scale/production, more operational overhead.`
 - **chroma**: lightweight, popular for local prototyping/small RAG projects.
+
+## references
+- [databricks](https://www.databricks.com/blog/what-is-vector-database)
+- [pinecone](https://www.pinecone.io/learn/vector-similarity/)
+- [redis](https://redis.io/blog/vector-similarity/)
+- []()
