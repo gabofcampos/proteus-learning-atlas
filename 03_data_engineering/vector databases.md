@@ -37,7 +37,7 @@ cosine similarity is always in the interval ([-1, 1]):
 - **cos_sim = 0**: The angle (θ) is 90 degrees, meaning the vectors are orthogonal, which often indicates they are unrelated in context.
 - **cos_sim = -1**: The angle (θ) is 180 degrees, meaning the vectors are aligned but point in opposite directions.
 
-![[Pasted image 20260909172048.png|398]]
+![[cosine_similarity_computation.png|398]]
 #### 2. dot product or inner product
 
 ==measures both similarity and magnitude of vectors.==
@@ -71,6 +71,19 @@ because euclidian measures the distance, the closer the vectors (more similar) t
 3. **insert into a collection:** the vector + payload get stored. the db updates its index as each item comes in. **indexing does not happen at a separate step, it happens *during insertion***. while bulk loading a dataset, indexing will take time to build, can be slower than you might expect.
 
 #### indexing
+==**goal:** to optimize retrieval process by applying algorithms to vectors so similar vectors will be grouped together in the same region of space.==
+
+vector indexes are created as part of a vector db to speed vector search by using mathematical approximations rather than exact matches to find the best semantic results in the dataset.
+
+**while indexes can significantly improve read performance, they can slow down write operations, as each insert or update has to update the index.**
+
+##### techniques
+1. **inverted files (ivf):** *(basic indexing)* splits embeddings into clusters by means of clustering techniques like k-means clustering. This way, when a new query comes, the system identifies the nearest or most similar cluster and searches only within that cluster. **common in FAISS/pgvector.**
+2. **hierarchical navigable small world (hnsw):** *(complex technique born from skip list+nsw technique)* a multilayer graph of vectors is built so search can hop toward the neighborhood of the query instead of scanning linearly. **used by qdrant by default.**
+		- ***NSW:*** technique where proximate graph nodes are linked together based on similarity. There is an pre-defined entry point connected to multiple nodes. Greedy search is used to search for the nearest neighbor point.  So we enter through the entry node, find across all linked nodes the one closest to our query vector, and move onto that one. This process repeats until there is no node more similar to our query vector than the one we are currently in.
+		- **skip list:** probabilistic data structure based off of linked lists.
+			`provides average \(O(\log n)\) time complexity for search, insertion, and deletion operations.`
+			![[skip_list.png|506]]
 
 
 ### the search
@@ -102,4 +115,5 @@ if your dataset is small enough that brute force cosine similarity over a numpy 
 - [databricks](https://www.databricks.com/blog/what-is-vector-database)
 - [pinecone](https://www.pinecone.io/learn/vector-similarity/)
 - [redis](https://redis.io/blog/vector-similarity/)
-- []()
+- [mongodb](https://www.mongodb.com/resources/basics/vector-index)
+- [leetcode](https://leetcode.com/discuss/post/4506645/skip-list-implementation-search-insert-d-n60u/)
