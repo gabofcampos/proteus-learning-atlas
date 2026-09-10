@@ -7,3 +7,7 @@ topics, subjects, concepts to research, learn or pullish:
 - spatial data engineering (PostGIS, GDAL/OGR)
 - revision data structures and cost of operations over them
 - revision of search algorithms
+	- KNN (k-nearest neighbors)
+	- ANN (approximate nearest neighbors)
+	- Dijkstra
+	- A* Search
