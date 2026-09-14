@@ -2,6 +2,7 @@ topics, subjects, concepts to research, learn or pullish:
 - deep copy vs copy
 - sql partitioning
 - spark 
+	- [[00_spark basics]]
 	- broadcast join
 	- how things run, executors, tasks...
 - spatial data engineering (PostGIS, GDAL/OGR)
@@ -12,11 +13,11 @@ topics, subjects, concepts to research, learn or pullish:
 	- Dijkstra
 	- A* Search
 - empty/stub notes to finish
-	- langgraph
-	- langfuse
-	- spark basics
+	- [[langgraph]]
+	- [[langfuse]]
+	- [[qdrant]]
 - notes to create (linked but missing)
-	- Embeddings
-	- RAG
-	- LLM Agents
-	- LLM Observability
+	- [[Embeddings]]
+	- [[RAG]]
+	- [[LLM Agents]]
+	- [[LLM Observability]]
