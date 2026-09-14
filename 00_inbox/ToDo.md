@@ -15,7 +15,6 @@ topics, subjects, concepts to research, learn or pullish:
 - empty/stub notes to finish
 	- [[langgraph]]
 	- [[langfuse]]
-	- [[qdrant]]
 - notes to create (linked but missing)
 	- [[Embeddings]]
 	- [[RAG]]
