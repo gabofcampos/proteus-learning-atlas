@@ -55,4 +55,4 @@ queried qdrant through a langgraph `retrieve` node to pull context for the `gene
 - [[vector databases]]
 - [[Embeddings]]
 - [[RAG]]
-- [[notebooks/rag_stack_skeleton_exec.ipynb]]
+- [[corporate_rag]]

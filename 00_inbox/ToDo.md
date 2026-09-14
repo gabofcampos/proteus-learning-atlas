@@ -12,9 +12,6 @@ topics, subjects, concepts to research, learn or pullish:
 	- ANN (approximate nearest neighbors)
 	- Dijkstra
 	- A* Search
-- empty/stub notes to finish
-	- [[langgraph]]
-	- [[langfuse]]
 - notes to create (linked but missing)
 	- [[Embeddings]]
 	- [[RAG]]

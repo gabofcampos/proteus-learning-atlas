@@ -15,5 +15,4 @@ start --> id1([retrieve]) --> id2([generate]) --> stop
 - `generate`: when generate runs, the state has the question (query) and the context from the search we got from the previous retrieve step. This step prompts ollama with that context and the question and explicitely states to only use the context returned by the vector database (to avoid hallucinations).
 
 ## Related
-
-- [[notebooks/rag_stack_skeleton_exec.ipynb]]
+- [[corporate_rag]]

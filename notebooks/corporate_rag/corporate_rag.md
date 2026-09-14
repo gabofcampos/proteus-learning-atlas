@@ -1,6 +1,7 @@
 ## Notebook
 
-`notebooks/rag_stack_skeleton_exec.ipynb`
+ [[notebooks/rag_stack_skeleton_exec.ipynb]]
+
 
 ## what am I building?
 a RAG to aid in costumer service for a hypothetical shipping company.
@@ -30,10 +31,8 @@ the context in this case is the top 3 chunks qdrant returns as the closest to th
 the context is _not_:
 - the whole document embedded. It is just the top 3 chunks, filtered by similarity for this one query.
 -  fixed. Every time we call the retrieve node, the context changes since the embedded query sent to qdrant changes and thus the space in which it falls.
-- the model's context window. 
-
+- the model's context window. w
 ## concepts
-
 - [[LLM Agents]]
 - [[RAG]]
 - [[vector databases]]
