@@ -4,24 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "e4dc1ad7d387f723",
+        "id": "7b3df2e09d2f58aa",
         "type": "tabs",
         "children": [
           {
-            "id": "185f85851ed43e54",
+            "id": "aa71ef40d0e77786",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05_ai/ollama.md",
+                "file": "03_data_engineering/03_databricks/data lake vs data warehouse vs data lakehouse.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ollama"
+              "title": "data lake vs data warehouse vs data lakehouse"
+            }
+          },
+          {
+            "id": "f8af549f9ef57a95",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03_data_engineering/03_databricks/data lake vs data warehouse vs data lakehouse.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "data lake vs data warehouse vs data lakehouse"
+            }
+          },
+          {
+            "id": "100e01160438a0c2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03_data_engineering/03_databricks/00_databricks_certified_associate_/exam prep guide.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "exam prep guide"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -83,7 +112,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 301.75390625
   },
   "right": {
     "id": "030396a5b6347305",
@@ -99,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "05_ai/ollama.md",
+                "file": "03_data_engineering/03_databricks/data lake vs data warehouse vs data lakehouse.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "05_ai/ollama.md",
+                "file": "03_data_engineering/03_databricks/data lake vs data warehouse vs data lakehouse.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "05_ai/ollama.md",
+                "file": "03_data_engineering/03_databricks/data lake vs data warehouse vs data lakehouse.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -210,11 +239,18 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "185f85851ed43e54",
+  "active": "4ab3ef1b61b25187",
   "lastOpenFiles": [
+    "03_data_engineering/03_databricks/data intelligence platform.md",
+    "03_data_engineering/03_databricks/data lake vs data warehouse vs data lakehouse.md",
+    "03_data_engineering/03_databricks/00_databricks_certified_associate_/exam prep guide.md",
+    "Claude outputs/databricks_data_engineer_associate_prep_plan.md",
+    "03_data_engineering/03_databricks/00_databricks_certified_associate_/databricks-certified-data-engineer-associate-exam-guide-may-2026-000.pdf",
+    "05_ai/ollama.md",
+    "03_data_engineering/03_databricks/00_databricks_certified_associate_",
+    "03_data_engineering/03_databricks",
     "00_inbox/ToDo.md",
     "05_ai/langgraph.md",
-    "05_ai/ollama.md",
     "Claude outputs/ollama.md",
     "Claude outputs",
     "05_ai/langfuse.md",
@@ -243,12 +279,9 @@
     "Untitled 2.canvas",
     "Untitled 1.canvas",
     "notebooks/rag_stack_skeleton_exec.ipynb",
-    "notebooks",
-    "05_ai",
     "03_data_engineering/01_spark/skew aware join or aggregation techniques.md",
     "03_data_engineering/01_spark/pre-aggregating before shuffle.md",
     "03_data_engineering/01_spark/salting hot keys.md",
-    "skew aware joins",
     "03_data_engineering/01_spark/pre-aggregating before shuffle.canvas",
     "04_sql/HAVING vs WHERE.md",
     "01_python/01_pyspark/collect() vs take() vs show().md",
