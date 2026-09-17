@@ -36,7 +36,7 @@ Sections 2, 3, and 6 (53% combined) all assume you can read and write basic PySp
 
 ## Recommended training (official, from the exam guide)
 
-- Instructor-led: **Data Engineering with Databricks**. This course includes an Apache Spark programming module; prioritize that module during week 1 rather than skipping ahead to the Databricks-specific parts.
+- Instructor-led: **Data Engineering with Databricks**. Note: this course assumes you already know Spark going in, it does not teach it. See the week 1 training note below for the actual Spark-fundamentals course to take first.
 - Self-paced (Databricks Academy):
   - Data Ingestion with Lakeflow Connect
   - Deploy Workloads with Lakeflow Jobs
@@ -73,7 +73,9 @@ Then, lighter, Section 1 (Databricks Intelligence Platform, 6%):
 - Compute services: all-purpose vs job clusters vs SQL warehouses vs serverless, their characteristics, cost model, and when to use which
 
 **Training to do this week**
-- Data Engineering with Databricks: Spark/PySpark fundamentals module (do this first, before the Databricks-platform modules)
+- **Correction from earlier draft:** "Data Engineering with Databricks" (the official exam-guide course) actually assumes you already know Spark; it is not where the fundamentals live. The course that actually teaches Spark/PySpark from zero, no prior Spark experience required, is a separate one:
+  - **Apache Spark Programming with Databricks** (self-paced version). 16 hours across 4 modules: Spark architecture, the DataFrame API, joins/aggregations/complex types, and an intro to Structured Streaming and Delta Lake optimization. This maps directly onto this week's concept list. Access it via Databricks Academy (create an account at customer-academy.databricks.com if you don't have one through Unit8 already; worth checking with your team first since partner accounts sometimes include free/discounted access). Registration options and current pricing are shown when you go to register, since they vary by account type.
+  - Free alternative/supplement: Databricks also offers a **free, self-paced certification overview course** for the Data Engineer Associate exam specifically (new users: catalog DB005a on Databricks Academy). It's lighter than the full Spark course, touching ETL with Spark SQL/Python and incremental processing, so treat it as a quick free primer rather than a replacement for the Spark course above.
 - Get Started with Data Governance on Databricks (short, sets vocabulary for later)
 
 **Vault notes to create**
