@@ -4,53 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "7b3df2e09d2f58aa",
+        "id": "aa723c78ffecc927",
         "type": "tabs",
         "children": [
           {
-            "id": "aa71ef40d0e77786",
+            "id": "12597c21ee3b0522",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_data_engineering/03_databricks/data lake vs data warehouse vs data lakehouse.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "data lake vs data warehouse vs data lakehouse"
-            }
-          },
-          {
-            "id": "f8af549f9ef57a95",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_data_engineering/03_databricks/data lake vs data warehouse vs data lakehouse.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "data lake vs data warehouse vs data lakehouse"
-            }
-          },
-          {
-            "id": "100e01160438a0c2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_data_engineering/03_databricks/00_databricks_certified_associate_/exam prep guide.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "exam prep guide"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -128,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03_data_engineering/03_databricks/data lake vs data warehouse vs data lakehouse.md",
+                "file": "03_data_engineering/01_spark/00_spark_architecture.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03_data_engineering/03_databricks/data lake vs data warehouse vs data lakehouse.md",
+                "file": "03_data_engineering/01_spark/00_spark_architecture.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -190,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_data_engineering/03_databricks/data lake vs data warehouse vs data lakehouse.md",
+                "file": "03_data_engineering/01_spark/00_spark_architecture.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -236,23 +203,37 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "obsidian-git:Open Git source control": false,
-      "mermaid-tools:Open Mermaid Toolbar": false
+      "mermaid-tools:Open Mermaid Toolbar": false,
+      "knowledge-atlas:Open knowledge atlas": false
     }
   },
-  "active": "4ab3ef1b61b25187",
+  "active": "12597c21ee3b0522",
   "lastOpenFiles": [
-    "03_data_engineering/03_databricks/data intelligence platform.md",
-    "03_data_engineering/03_databricks/data lake vs data warehouse vs data lakehouse.md",
+    "articles I want to read.md",
+    "03_data_engineering/01_spark/00_spark basics.md",
+    "exercises/pyspark/pyspark/pyspark_solutions-checkpoint.ipynb",
+    "exercises/pyspark/pyspark",
+    "00_inbox/spark_concepts.md",
+    "exercises/python/python_exercises.md",
+    "exercises/python",
+    "exercises/pyspark/pyspark_solutions.ipynb",
+    "exercises/pyspark/pyspark.md",
+    "exercises/pyspark",
+    "exercises/sql/sql_solutions.sql",
+    "exercises/sql/sql_exercises.md",
+    "exercises/sql",
+    "exercises",
+    "03_data_engineering/01_spark/00_spark_architecture.md",
     "03_data_engineering/03_databricks/00_databricks_certified_associate_/exam prep guide.md",
+    "03_data_engineering/03_databricks/data lake vs data warehouse vs data lakehouse.md",
+    "03_data_engineering/03_databricks/data intelligence platform.md",
     "Claude outputs/databricks_data_engineer_associate_prep_plan.md",
     "03_data_engineering/03_databricks/00_databricks_certified_associate_/databricks-certified-data-engineer-associate-exam-guide-may-2026-000.pdf",
     "05_ai/ollama.md",
     "03_data_engineering/03_databricks/00_databricks_certified_associate_",
-    "03_data_engineering/03_databricks",
     "00_inbox/ToDo.md",
     "05_ai/langgraph.md",
     "Claude outputs/ollama.md",
-    "Claude outputs",
     "05_ai/langfuse.md",
     "images/langfuse.png",
     "05_ai/qdrant.md",
@@ -260,31 +241,17 @@
     "agents/proteus-learning-atlas -  todo audit from the obsidian graph.md",
     "03_data_engineering/vector databases.md",
     "Embeddings.md",
-    "03_data_engineering/01_spark/00_spark basics.md",
     "README.md",
     "Untitled.canvas",
-    "agents",
     "RAG.md",
     "agent_with_memory.md",
     "images/vector_databases_hnsw.png",
     "images/cosine_similarity_computation.png",
     "images/Pasted image 20260909171642.png",
     "images/skip_list.png",
-    "images",
-    "03_data_engineering/02_spatial_data_engineering",
     "03_data_engineering/01_spark/data skew.md",
-    "notebooks/corporate_rag/rag_stack_skeleton_exec.ipynb",
-    "notebooks/corporate_rag",
-    "2026-09-08.md",
     "Untitled 2.canvas",
     "Untitled 1.canvas",
-    "notebooks/rag_stack_skeleton_exec.ipynb",
-    "03_data_engineering/01_spark/skew aware join or aggregation techniques.md",
-    "03_data_engineering/01_spark/pre-aggregating before shuffle.md",
-    "03_data_engineering/01_spark/salting hot keys.md",
-    "03_data_engineering/01_spark/pre-aggregating before shuffle.canvas",
-    "04_sql/HAVING vs WHERE.md",
-    "01_python/01_pyspark/collect() vs take() vs show().md",
-    "01_python/00_general/01_iterators_vs_generators.md.md"
+    "03_data_engineering/01_spark/pre-aggregating before shuffle.canvas"
   ]
 }
