@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "393f2f55537a30b3",
+        "id": "837614921b7757f8",
         "type": "tabs",
         "children": [
           {
-            "id": "9a21a13f33eac3a9",
+            "id": "1a19abd2fa494596",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -207,7 +207,7 @@
       "knowledge-atlas:Open knowledge atlas": false
     }
   },
-  "active": "9a21a13f33eac3a9",
+  "active": "1a19abd2fa494596",
   "lastOpenFiles": [
     "exercises/python/python_exercises.md",
     "01_python/00_general/context managers.md",
