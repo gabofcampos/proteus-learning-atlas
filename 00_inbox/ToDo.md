@@ -6,6 +6,11 @@ topics, subjects, concepts to research, learn or pullish:
 	- broadcast join
 	- how things run, executors, tasks...
 - spatial data engineering (PostGIS, GDAL/OGR)
+	- what is a CRS
+	- VECTOR VS RASTER
+	- WHAT IS GDAL/OGR
+	- DIFF BETWEEN POLYGON AND MULTIPOLYGON
+	- libraries: geopandas, shapely
 - revision data structures and cost of operations over them
 - revision of search algorithms
 	- KNN (k-nearest neighbors)

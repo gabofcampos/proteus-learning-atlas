@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "aa723c78ffecc927",
+        "id": "9adad504645f5327",
         "type": "tabs",
         "children": [
           {
-            "id": "12597c21ee3b0522",
+            "id": "b6059abd5f789da6",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -207,14 +207,16 @@
       "knowledge-atlas:Open knowledge atlas": false
     }
   },
-  "active": "12597c21ee3b0522",
+  "active": "b6059abd5f789da6",
   "lastOpenFiles": [
-    "articles I want to read.md",
     "03_data_engineering/01_spark/00_spark basics.md",
+    "exercises/python/python_exercises.md",
+    "01_python/00_general/context managers.md",
+    "01_python/00_general/01_iterators_vs_generators.md.md",
+    "articles I want to read.md",
     "exercises/pyspark/pyspark/pyspark_solutions-checkpoint.ipynb",
     "exercises/pyspark/pyspark",
     "00_inbox/spark_concepts.md",
-    "exercises/python/python_exercises.md",
     "exercises/python",
     "exercises/pyspark/pyspark_solutions.ipynb",
     "exercises/pyspark/pyspark.md",
@@ -249,7 +251,6 @@
     "images/cosine_similarity_computation.png",
     "images/Pasted image 20260909171642.png",
     "images/skip_list.png",
-    "03_data_engineering/01_spark/data skew.md",
     "Untitled 2.canvas",
     "Untitled 1.canvas",
     "03_data_engineering/01_spark/pre-aggregating before shuffle.canvas"
