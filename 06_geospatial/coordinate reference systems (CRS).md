@@ -9,10 +9,10 @@ the earth is not flat so trying to represent it in a flat surface always entails
 
 a CRS bridges the gap between the different dimensional formats using a combination of datum (earth model), map projection and a coordinate grid (ellipsoidal vs geoidal).
 
-## crs = projection + datum + height reference
+## crs = projection + datum + coordinate system 
  - **projection:** how curved earth's coordinates are flattened onto a map (Mercator, UTM, Lambert...)
- - **datum:** the reference model of Earth used for positioning (WSG84, GDA2020...)
- - **vertical reference/coordinate grid:** whether height is measured on an ellipsoid (smooth math based surface) or a geoid (models sea level variations)
+ - **datum:** the reference model of Earth used for positioning (WGS84, GDA2020...)
+ - **coordinate system/vertical reference:** whether height is measured on an ellipsoid (smooth math based surface) or a geoid (models sea level variations)
 
 *from a set of coordinates a CRS will tell GIS how to interpret those numbers*
 ## types of crs
