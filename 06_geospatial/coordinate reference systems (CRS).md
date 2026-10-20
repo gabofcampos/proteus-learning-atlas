@@ -34,7 +34,7 @@ as a rough rule:
 - conic projection: good for mid-latitude areas EW.
 - cylindrical projection: good for near the equator or narrow NS strips.
 
-**projections by conformity**
+#### projections by conformity
 the choice in projection depends on the focus of the study. nothing preserves all of them at once.
 if we need:
 - **angular conformity:** these are called **_conformal_** projections. they preserve shapes/angular relationships. The larger the area, the harder it is for angular conformity to be kept (keep it small). 
@@ -53,6 +53,22 @@ if we need:
 - **UTM/MGA:** 60 zones, each 6° wide, keeps distortion small within a zone. MGA is UTM on GDA.
 - **Web Mercator (EPSG:3857):** what web maps use, great for display, bad for measuring (Greenland looks the size of Africa).
 ### datum
+>  mathematical model that defines the shape and size of the Earth’s surface, as well as the location of a reference point (the geodetic origin) and the orientation of the axes.
+
+#### vertical datum
+defines elevation (using a reference surface against which all is measured).
+
+#### horizontal or geodetic datum
+defines positions in terms of latitude and longitude. 
+
+they have 2 parts:
+1. **An ellipsoid**: the mathematical shape. A sphere squashed at the poles, defined by just two numbers: the equatorial radius (semi-major axis, ~6,378 km) and the flattening (~1/298). 
+	1. Examples: *GRS80, WGS84 ellipsoid, Clarke 1866, ANS.*
+2. **How that ellipsoid is pinned to the Earth**: where its centre is, how its axes are oriented, and (for modern datums) **at what date** (the reference epoch).
+
+So: **datum = shape + placement (+ time)**. Two datums can share the exact same ellipsoid and still give different coordinates for the same spot, because they placed it differently.
+
+> **reminder:** plates move!!!
 
 ## main types of crs
 there are two main types of CRS:
