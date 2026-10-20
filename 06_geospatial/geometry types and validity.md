@@ -47,5 +47,4 @@ While inspecting OSM park geometries:
 - After applying `make_valid()`, 9 became GeometryCollections and 1 remained a MultiPolygon.  
 
 ## related
-
 - [[coordinate reference systems (CRS)]]
