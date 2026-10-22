@@ -13,7 +13,10 @@ a geometry can be syntactically readable but geometrically invalid (see: [link](
 
 ### what makes a geometry valid?
 
-
+not well formed geometry 
+- **points:** are usually valid as long as they contain real coordinate values.
+- **linestrings:** at least 2 diff points and no adjacent duplicate vertices
+- **polygon:** valid if the ring close (same start and end coordinate), no self intersections (figure 8s), holes must lie completely inside the exterior shell and cannot overlap each other and must have at least 4 coordinate tuples.
 ## geometry validation with GeoPandas
 
 ```python
