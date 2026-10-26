@@ -115,3 +115,7 @@ def print_pairs(list_a, list_b):
 ## related notes
 - [[vector databases]] → uses logarithmic index traversal (HNSW / Skip Lists).
 - [[01_iterators_vs_generators.md|01_iterators_vs_generators]] → generator streams keep space complexity at $O(1)$ compared to loading entire lists $O(n)$ in memory.
+
+
+## related repos
+- [my leet code repository](https://github.com/gabofcampos/leetcode)
