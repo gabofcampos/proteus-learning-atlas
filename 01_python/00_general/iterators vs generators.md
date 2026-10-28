@@ -1,4 +1,4 @@
-- Iterators: objectos to iterate upon. For looping and list comprehensions.
+- Iterators: objects to iterate upon. For looping and list comprehensions.
 
 ## iterators
 - follow iteration protocol
@@ -17,7 +17,7 @@ iterable = [1, 2, 3, 4] # type list
 iter(iterable) # type: list iterator
 ```
 
-- multiple iterators instanciated from the same source object will keep separate iterator states. **They are lazy in nature: even if an iterator is created they don't yield an item until requested.** 
+- multiple iterators instantiated from the same source object will keep separate iterator states. **They are lazy in nature: even if an iterator is created they don't yield an item until requested.** 
 
 ## generators
 - function that returns an iterator object with a sequence of values
