@@ -25,7 +25,7 @@ iter(iterable) # type: list iterator
 
 > **a generator object does not return items, it uses yield to generate items on the spot**
 
-`yield` controls the flow of a generator function. It returns the function but remembers the state of its local variables as well. The generator returned by `yield` can be assigned to a variable and and iterated through with `next()`. This will execute the function up to the first `yield` keyword it encounters. Once the `yield` keyword is hit, the execution of the function is suspended
+`yield` controls the flow of a generator function. It returns the function but remembers the state of its local variables as well. The generator returned by `yield` can be assigned to a variable and and iterated through with `next()`. This will execute the function up to the first `yield` keyword it encounters. Once the `yield` keyword is hit, the execution of the function is suspended
 
 ### how to create them?
 
@@ -38,7 +38,7 @@ g = (x for x in range(10))
 
 ## when to choose which
 
-**Iterator over generator if a complex state-maintaining behavior is required** or if you wish to expose other methods beyond `__next__()`, `__iter__()`, and `__init__()`. 
+**Iterator over generator if a complex state-maintaining behavior is required** or if you wish to expose other methods beyond `__next__()`, `__iter__()`, and `__init__()`. 
 
 On the other hand, **a generator may be preferable when dealing with large sets of data since they do not store their contents in memory** or when it is not necessary to implement an iterator.
 

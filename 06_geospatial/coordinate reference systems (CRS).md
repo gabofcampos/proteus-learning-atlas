@@ -53,7 +53,7 @@ if we need:
 - **UTM/MGA:** 60 zones, each 6° wide, keeps distortion small within a zone. MGA is UTM on GDA.
 - **Web Mercator (EPSG:3857):** what web maps use, great for display, bad for measuring (Greenland looks the size of Africa).
 ### datum
->  mathematical model that defines the shape and size of the Earth’s surface, as well as the location of a reference point (the geodetic origin) and the orientation of the axes.
+>  mathematical model that defines the shape and size of the Earth’s surface, as well as the location of a reference point (the geodetic origin) and the orientation of the axes.
 
 #### vertical datum
 defines elevation (using a reference surface against which all is measured).

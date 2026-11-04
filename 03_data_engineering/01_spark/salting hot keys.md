@@ -22,7 +22,7 @@ salted = df.withColumn( "salted_key", (F.rand() * 10).cast("int") )
 3. Process in parallel: The cluster can now distribute the workload across different executors or nodes.
 ```python
 # what before meant shuffleing only by country and leaving a task to a huge partition
-# skewed = ( salted .groupBy("country") .count() )
+# skewed = ( salted .groupBy("country") .count() )
 
 # now means shuffleing by country and salted key, and having a task to a smaller salted key partition
 partial = ( salted .groupBy("country", "salted_key") .count() )

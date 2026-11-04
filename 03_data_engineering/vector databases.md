@@ -33,9 +33,9 @@ three common similar methods to measure closeness:
 downside: this obliviousness towards a difference in vector scale can be a limiting factor depending on the context.
 
 cosine similarity is always in the interval ([-1, 1]):
-- **cos_sim = 1**: The angle (θ) is 0, meaning the vectors point in the same direction (one is a positive scalar multiple of the other). 
-- **cos_sim = 0**: The angle (θ) is 90 degrees, meaning the vectors are orthogonal, which often indicates they are unrelated in context.
-- **cos_sim = -1**: The angle (θ) is 180 degrees, meaning the vectors are aligned but point in opposite directions.
+- **cos_sim = 1**: The angle (θ) is 0, meaning the vectors point in the same direction (one is a positive scalar multiple of the other). 
+- **cos_sim = 0**: The angle (θ) is 90 degrees, meaning the vectors are orthogonal, which often indicates they are unrelated in context.
+- **cos_sim = -1**: The angle (θ) is 180 degrees, meaning the vectors are aligned but point in opposite directions.
 <img src="../images/cosine_similarity_computation.png" width="398" alt="cosine similarity computation">
 
 #### 2. dot product or inner product

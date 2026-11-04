@@ -6,7 +6,7 @@
 
 - **data lake:** flexible repository to store data in it's raw format (**no need to impose a schema**). addresses limitations of warehouse:
 	- stores any kind of data (unstructured and semi as well). 
-		-  data is ingested without a predefined schema, enabling a **schema-on-read** model where structure is applied only when the data is accessed for analysis. so users are able to apply their own schemas without duplicating or reshaping the underlying data.
+		-  data is ingested without a predefined schema, enabling a **schema-on-read** model where structure is applied only when the data is accessed for analysis. so users are able to apply their own schemas without duplicating or reshaping the underlying data.
 	- inexpensive storage
 	- raw data can keep its schema without any transformations (*!! could make the data lake a data swamp*)
 	- avoid lock in to a proprietary system by decoupling data storage from the engines that process the data
