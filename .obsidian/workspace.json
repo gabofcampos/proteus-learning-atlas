@@ -25,14 +25,12 @@
             "id": "41cdd4f494fa58ae",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "03_data_engineering/01_spark/00 spark architecture and topology.md",
-                "mode": "source",
-                "source": false
+                "file": "images/cosine_similarity_computation.png"
               },
-              "icon": "lucide-file",
-              "title": "00 spark architecture and topology"
+              "icon": "lucide-image",
+              "title": "cosine_similarity_computation"
             }
           },
           {
@@ -48,9 +46,37 @@
               "icon": "lucide-file",
               "title": "00_spark_basics"
             }
+          },
+          {
+            "id": "5f59ab291cfe5629",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03_data_engineering/vector databases.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "vector databases"
+            }
+          },
+          {
+            "id": "23a903dd2bcb7191",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03_data_engineering/01_spark/00 spark architecture and topology.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "00 spark architecture and topology"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -240,10 +266,17 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "f868fd6de15cd354",
+  "active": "23a903dd2bcb7191",
   "lastOpenFiles": [
-    "03_data_engineering/01_spark/00 spark architecture and topology.md",
+    "03_data_engineering/vector databases.md",
     "03_data_engineering/01_spark/00_spark_basics.md",
+    "03_data_engineering/01_spark/00 spark architecture and topology.md",
+    "images/cosine_similarity_computation.png",
+    "05_ai/qdrant.md",
+    "05_ai/ollama.md",
+    "05_ai/langgraph.md",
+    "05_ai/langfuse.md",
+    "images/spark_architecture.png",
     "00_inbox/ToDo.md",
     "agents/proteus-learning-atlas -  plan_study_session.md",
     "02_algorithms_and_data_structures/dynamic programming.md",
@@ -265,25 +298,18 @@
     "01_python/00_general/iterators vs generators.md",
     "06_geospatial/geometry types and validity.md",
     "06_geospatial/coordinate reference systems (CRS).md",
-    "05_ai/langgraph.md",
     "01_python/01_pyspark/collect() vs take() vs show().md",
     "images/latitude_longitude.png",
-    "03_data_engineering/vector databases.md",
     "images/skip_list.png",
     "2026-10-20.md",
-    "05_ai/ollama.md",
     "Claude outputs/ollama.md",
     "exercises/python/python_exercises.md",
     "01_python/00_general/context managers.md",
     "articles I want to read.md",
     "00_inbox/spark_concepts.md",
-    "exercises/pyspark/pyspark.md",
-    "exercises/sql/sql_exercises.md",
-    "03_data_engineering/01_spark/00_spark_architecture.md",
     "images/langfuse.png",
     "Untitled.canvas",
     "images/vector_databases_hnsw.png",
-    "images/cosine_similarity_computation.png",
     "images/Pasted image 20260909171642.png",
     "Untitled 2.canvas",
     "Untitled 1.canvas",
