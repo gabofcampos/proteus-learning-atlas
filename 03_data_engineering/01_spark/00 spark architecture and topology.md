@@ -73,6 +73,10 @@ mostly to optimize the execution of queries on datasets and dataframes.
 it is especially helpful when using built-in spark functions, as it can reorder and optimize transformations to avoid unnecessary computation.
 
 
+### shuffle
+==costly operation in which data is redistributed across partitions.==
 
+**what causes it?** join, groupBy, repartition.
+**why so expensive?** to run these ops, data needs to be transferred from their original nodes this can cause network congestion and I/0 issues.
 ## related
 [[00_spark_basics]]
