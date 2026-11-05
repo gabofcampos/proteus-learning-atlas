@@ -11,6 +11,11 @@
 3. **support for multiple languages (polyglot programming):** R, java, python, scala.
 4. **built in libraries:** spark sql, spark MLlib, spark graphx, spark structured streaming
 
+## user defined functions and spark
+
+spark provides a framework for distributed processing but UDFs can affect performance bc:
+- **serialization:** udfs are executed row by row. each row is serialized and sent to the python process (if pyspark). this adds overhead, unlike native functions which are optimized.
+- **lack of optimization:** spark cannot optimize udfs as it has its own fns. (specially problematic with large datasets).
 
 ### how did spark originate?
 apache spark is born out of a necessity to tackle the downsides hadoop had in terms of speed and real-time processing capabilities, largely due to its disk intensive mapreduce paradigm.

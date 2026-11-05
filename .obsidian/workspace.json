@@ -35,7 +35,8 @@
               "title": "00_spark_basics"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -225,10 +226,10 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "66e2d1d94181fb86",
+  "active": "41cdd4f494fa58ae",
   "lastOpenFiles": [
-    "03_data_engineering/01_spark/00_spark_basics.md",
     "03_data_engineering/01_spark/00 spark architecture and topology.md",
+    "03_data_engineering/01_spark/00_spark_basics.md",
     "agents/proteus-learning-atlas -  plan_study_session.md",
     "02_algorithms_and_data_structures/dynamic programming.md",
     "notebooks/corporate_rag/corporate_rag.md.bak",

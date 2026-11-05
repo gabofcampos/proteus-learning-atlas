@@ -66,4 +66,13 @@ then the DAG scheduler divides the DAG into stages, each containing multiple tas
  Each operation in your Spark job is represented as a node in the DAG, and the dependencies between operations are represented as edges.
 
 ### catalyst optimizer
+mostly to optimize the execution of queries on datasets and dataframes.
 
+ it analyzes the logical execution plan and applies optimizations like predicate pushdown, constant folding, and reordering of operations to improve query performance.
+
+it is especially helpful when using built-in spark functions, as it can reorder and optimize transformations to avoid unnecessary computation.
+
+
+
+## related
+[[00_spark_basics]]
