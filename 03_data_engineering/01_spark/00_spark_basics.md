@@ -18,15 +18,19 @@ spark provides a framework for distributed processing but UDFs can affect perfor
 - **lack of optimization:** spark cannot optimize udfs as it has its own fns. (specially problematic with large datasets).
 
 ```python
-from pyspark.sql.functions import udf  
-from pyspark.sql.types import DoubleType  
-  
-# udf to double the price
-def double_price(price): return price * 2  
-# register udf 
-double_price_udf = udf(double_price, DoubleType())  
+from pyspark.sql.functions import udf
+from pyspark.sql.types import DoubleType
 
-df = spark.read.csv("catalog_data.csv")  
+
+# udf to double the price
+def double_price(price):
+    return price * 2
+
+
+# register udf
+double_price_udf = udf(double_price, DoubleType())
+
+df = spark.read.csv("catalog_data.csv")
 df_modiffied = df.withColumn("double_price", double_price_udf(df["price"]))
 ```
 
@@ -55,13 +59,20 @@ import pandas as pd
 from pyspark.sql.functions import pandas_udf
 from pyspark.sql.types import DoubleType
 
+
 # define a pd udf (takes and returns a pd.Series)
 @pandas_udf(DoubleType())
 def double_price_vectorized(price: pd.Series) -> pd.Series:
     return price * 2
+
 
 df_modified = df.withColumn("double_price", double_price_vectorized(df["price"]))
 ```
 
 ### how did spark originate?
 apache spark is born out of a necessity to tackle the downsides hadoop had in terms of speed and real-time processing capabilities, largely due to its disk intensive mapreduce paradigm.
+
+
+## related
+- [[00 spark architecture and topology]]
+- [[airport_flight_operations]]

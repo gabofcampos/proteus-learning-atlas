@@ -1,3 +1,4 @@
 /.DS_Store
 
 notebooks/corporate_rag/.env
+notebooks/airport_flight_operations/.venv

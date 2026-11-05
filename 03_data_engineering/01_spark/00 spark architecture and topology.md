@@ -121,4 +121,5 @@ it is especially helpful when using built-in spark functions, as it can reorder 
 **what causes it?** join, groupBy, repartition.
 **why so expensive?** to run these ops, data needs to be transferred from their original nodes this can cause network congestion and I/0 issues.
 ## related
-[[00_spark_basics]]
+- [[00_spark_basics]]
+- [[airport_flight_operations]]
