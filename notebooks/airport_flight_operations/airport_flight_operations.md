@@ -37,6 +37,24 @@ hands-on practice to solidify spark fundamentals:
 - Identify where the physical plan executes narrow operations (`Filter`, `Project`) vs. where the `Exchange` (shuffle) occurs.
 - Understand how Spark breaks this DAG into stages.
 
+### 4. string formatting, derived metrics & SQL 'HAVING' equivalent
+- In `df_flights_delayed`:
+  - derive `route`: formatted string as `"MAD -> LHR"` from `origin` and `destination`.
+  - derive `airline_code`: extract the 2-letter airline code prefix from `flight_id` (e.g., `"IB"`, `"BA"`, `"LH"`).
+- In `flights_not_cancelled_stats`:
+  - add `delayed_pct`: percentage of flights delayed out of total flights, rounded to 1 decimal place (`delayed_flights / total_flights * 100`).
+  - filter out airlines with fewer than 2 total flights (PySpark equivalent to SQL `HAVING total_flights >= 2`).
+
+### 5. compound boolean filters, null handling & deduplication
+- Working with a dirty batch of radar updates:
+  - impute missing `airline` values with `"UNKNOWN"` using `F.coalesce` or `.fillna()`.
+  - filter flights matching: (`origin == "MAD"` AND `delay_minutes > 15`) OR (`destination == "JFK"`). Notice parentheses and bitwise `&` / `|` syntax.
+  - deduplicate by `flight_id` using `.dropDuplicates()`.
+
+### 6. pivoting / cross-tabulation
+- Find the count of flights operated by each airline per `origin` airport (`origin` as rows, `airline` as columns).
+- Replace any resulting `NULL` counts with `0`.
+- *Concept check:* Why is `.pivot()` expensive on high-cardinality columns?
 
 ## concepts
 - [[00_spark_basics]]
