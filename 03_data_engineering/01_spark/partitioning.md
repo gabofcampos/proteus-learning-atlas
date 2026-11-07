@@ -117,6 +117,16 @@ when you want to change the number of partitions
 > **best when: downscaling after filters/aggregations or optimizing output files before writting**
 
 
+### why partitioning might cause skew
+- spark assigns 1 task per partition to 1 core
+- when spark performs hash partitioning (`groupby` or `join`) all records with the same key hash to the same partition
+- if a key is disproportionately common (ex.: Iberia owns 80% of flights), that partition swells up while others might hold way less data volume → [[data skew]]
+> **in spark UI: the tasks assigned to data not belonging to the skew will finish fast but the task assigned to the data skew will hang back and become a straggler.**
+
+#### how partitioning fixes skew
+1. keyless repartitioning (`df.repartition(n_partitions)`): uses round robin distribution to scramble and balance row counts evenly across `n_partitions` breaking hot spots.
+2. salting the skew → [[salting hot keys]]:  the hot key is spread out into multiple partitions then aggregated back.
+3. adaptive query execution (**AQE skew join**): in `spark 3.x+`, spark automatically detects skewed partitions during runtime and splits them into subpartitions.
+4. coalesce warning: bc coalesce combines adjacent partitions locally without a full shuffle, suing a coalesce might turn a big partition into an even bigger making it worse.
 ### related
 - [[00_spark_basics]]****
-- [[data skew]] → TODO, HOW IS PARTITIONING REALTED TO DATA SKEW?
