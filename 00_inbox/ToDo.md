@@ -1,10 +1,7 @@
 topics, subjects, concepts to research, learn or pullish:
 - deep copy vs copy
 - sql partitioning
-- spark 
-	- [[00 spark architecture and topology]]
 	- broadcast join
-	- how things run, executors, tasks...
 - spatial data engineering (PostGIS, GDAL/OGR)
 	- what is a CRS
 	- VECTOR VS RASTER
