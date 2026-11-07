@@ -242,10 +242,10 @@
   },
   "active": "54f08f0e5deb36f1",
   "lastOpenFiles": [
+    "03_data_engineering/01_spark/partitioning.md",
+    "03_data_engineering/01_spark/join strategies.md",
     "03_data_engineering/01_spark/Untitled.md",
     "00_inbox/ToDo.md",
-    "03_data_engineering/01_spark/join strategies.md",
-    "03_data_engineering/01_spark/partitioning.md",
     "03_data_engineering/01_spark/salting hot keys.md",
     "03_data_engineering/01_spark/data skew.md",
     "03_data_engineering/01_spark/skew aware join or aggregation techniques.md",

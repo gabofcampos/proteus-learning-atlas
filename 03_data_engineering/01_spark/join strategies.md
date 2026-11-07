@@ -80,8 +80,8 @@ flowchart LR
 
 ```python
 df1.join(df2.hint("SHUFFLE_HASH"), "airline_code") 
-# preffer shuffle hash over sort-merge globally
-park.conf.set("spark.sql.join.preferSortMergeJoin", "false")
+# prefer shuffle hash over sort-merge globally
+spark.conf.set("spark.sql.join.preferSortMergeJoin", "false")
 ```
 ### how it works
 1. **shuffle (exchange):** shuffles both datasets across the cluster by join key (e.g. `airline_code`).
@@ -113,7 +113,6 @@ flowchart TD
 - compares every row of Table A with every row of Table B ($O(M \times N)$) → thus the *nested*
 - **extremely slow.** in production, always try to rewrite non-equi joins into range/bucketed equi-joins if possible.
 
----
 
 ## decision tree for interviews
 
