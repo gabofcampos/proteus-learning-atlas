@@ -56,7 +56,17 @@ hands-on practice to solidify spark fundamentals:
 - Replace any resulting `NULL` counts with `0`.
 - *Concept check:* Why is `.pivot()` expensive on high-cardinality columns?
 
+### 7. joins & broadcast optimization (`.explain()`)
+- Join `df_flights_delayed` with static metadata `df_airports` on `origin == iata_code`.
+- Inspect default physical execution plan with `.explain(mode="formatted")`.
+- Disable auto-broadcasting (`spark.sql.autoBroadcastJoinThreshold = -1`) and compare SortMergeJoin / Exchange vs BroadcastHashJoin.
+
+### 8. window functions (ranking & running totals)
+- Rank non-cancelled flights by `delay_minutes` descending within each `airline` to isolate the worst flight.
+- Calculate running cumulative delay minutes throughout the day per origin airport using `rowsBetween(Window.unboundedPreceding, Window.currentRow)`.
+
 ## concepts
 - [[00_spark_basics]]
 - [[00 spark architecture and topology]]
+- [[join strategies]]
 - [[data skew]]
