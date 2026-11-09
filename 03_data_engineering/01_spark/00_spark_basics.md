@@ -11,6 +11,27 @@
 3. **support for multiple languages (polyglot programming):** R, java, python, scala.
 4. **built in libraries:** spark sql, spark MLlib, spark graphx, spark structured streaming
 
+### transformations vs actions
+
+Spark operations are strictly split into two categories:
+
+#### 1. transformations (lazy)
+- **what they do:** define how to build a new DataFrame from an existing one without actually running the computation.
+- **behavior:** lazy evaluation. Spark simply records the instruction as a step in the DAG lineage graph.
+- **return type:** returns a new `DataFrame` (immutable).
+- **examples:**
+  - *narrow:* `select()`, `filter()`, `withColumn()`, `drop()`
+  - *wide:* `groupBy()`, `join()`, `distinct()`, `orderBy()`
+
+#### 2. actions (eager)
+- **what they do:** trigger the Catalyst optimizer to compile the DAG and kick off actual execution across the executors.
+- **behavior:** eager. Causes Spark to read data, execute tasks, and return a result.
+- **return type:** non-DataFrame value returned to the Driver (e.g., integer, list of Rows) OR data written to an external storage sink.
+- **examples:** `count()`, `show()`, `collect()`, `take(n)`, `first()`, `write.parquet()`, `saveAsTable()`
+
+> [!WARNING] The `collect()` Interview Trap
+> `collect()` pulls the entire distributed dataset from all worker nodes into the single Driver's RAM. If the dataset exceeds Driver memory, it crashes the app with `OutOfMemoryError: Java heap space`. In production or exploration, always prefer `take(n)`, `show()`, or writing directly to disk.
+
 ### user defined functions and spark
 
 spark provides a framework for distributed processing but UDFs can affect performance bc:
