@@ -79,6 +79,17 @@ df.withColumn("avg", avg(col("flight_occupancy")).over(windowPartitionAgg))
 - `min()`
 - `max()`
 
+### traps and gotchas
+
+#### what happens under the hood when you omit `.partitionBy` in a window specification?
+partitionby let's spark know which records to shuffle accross to different nodes in accordance to the key. 
+If no partitionby key is given, **spark is forced to shuffle all rows across the entire cluster into a single partition on a single executor to compute a global sort.** at production scale, this eliminates all parallelism and frequently causes OOM.
+
+#### why is `rowsBetween` preferred over `rangeBetween` for running totals?
+- `rowsBetween`: operates on exact row offsets (physical position).
+- `rangeBetween`: operates on value ranges of the ordering column (logical values).
+if two rows have the exact same timestamp,  `rangebetween` would aggregate them together rather than giving  a strictly progressive accumulation.
+
 ### related
 - [[00_spark_basics]]
 - 
