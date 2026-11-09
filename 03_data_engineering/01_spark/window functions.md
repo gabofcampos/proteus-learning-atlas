@@ -81,14 +81,34 @@ df.withColumn("avg", avg(col("flight_occupancy")).over(windowPartitionAgg))
 
 ### traps and gotchas
 
-#### what happens under the hood when you omit `.partitionBy` in a window specification?
+###### what happens under the hood when you omit `.partitionBy` in a window specification?
 partitionby let's spark know which records to shuffle accross to different nodes in accordance to the key. 
 If no partitionby key is given, **spark is forced to shuffle all rows across the entire cluster into a single partition on a single executor to compute a global sort.** at production scale, this eliminates all parallelism and frequently causes OOM.
 
-#### why is `rowsBetween` preferred over `rangeBetween` for running totals?
+###### why is `rowsBetween` preferred over `rangeBetween` for running totals?
 - `rowsBetween`: operates on exact row offsets (physical position).
 - `rangeBetween`: operates on value ranges of the ordering column (logical values).
 if two rows have the exact same timestamp,  `rangebetween` would aggregate them together rather than giving  a strictly progressive accumulation.
+
+###### deterministic deduplication: `dropDuplicates()` vs `row_number()`
+in a distributed cluster, `df.dropDuplicates(["flight_id"])` is **non-deterministic** regarding *which* row is kept. Data lives across multiple partitions on different machines, so whichever record happens to arrive first over the network shuffle is preserved.
+
+If you have duplicate records with conflicting timestamps or statuses, `dropDuplicates()` gives you unpredictable results on every run.
+
+**the solution:** use `row_number()` over a window ordered by your criteria (e.g., `updated_at DESC` or `event_time ASC`) and filter for row 1:
+
+```python
+from pyspark.sql.window import Window
+from pyspark.sql.functions import col, row_number
+
+window_spec = Window.partitionBy("flight_id").orderBy(col("updated_at").desc())
+
+df_deterministic = (
+    df.withColumn("row_num", row_number().over(window_spec))
+      .filter(col("row_num") == 1)
+      .drop("row_num")
+)
+```
 
 ### related
 - [[00_spark_basics]]
