@@ -21,49 +21,13 @@ in a kafka cluster:
 - applications publish events into kafka and other systems consume them.
 	- this decoupled design allows for teams to scale up and add new consumers and evolve without tightly coupling producers and consumers
 
-```mermaid
-flowchart TD
-    subgraph producers["producers"]
-        p1["flight radar telemetry"]
-        p2["baggage handling system"]
-    end
-
-    subgraph cluster["kafka cluster (brokers)"]
-        subgraph topic["topic: flight-events (3 partitions, rf=2)"]
-            subgraph p0["partition 0"]
-                l0["leader (broker 1)"]
-                f0["follower (broker 2)"]
-            end
-            subgraph p1_part["partition 1"]
-                l1["leader (broker 2)"]
-                f1["follower (broker 3)"]
-            end
-            subgraph p2_part["partition 2"]
-                l2["leader (broker 3)"]
-                f2["follower (broker 1)"]
-            end
-        end
-    end
-
-    subgraph consumers["consumer group: flight-monitoring"]
-        c1["consumer 1 (reads p0)"]
-        c2["consumer 2 (reads p1)"]
-        c3["consumer 3 (reads p2)"]
-    end
-
-    p1 --> cluster
-    p2 --> cluster
-    l0 --> c1
-    l1 --> c2
-    l2 --> c3
-```
-
+[![](https://mermaid.ink/img/pako:eNp1Ul1vmzAU_SuWpb4FhD0oKQ-ToNWqqV0UTX3asgcHOwQFbGSbrVma_PbaEL6i5AEJn3PuPffrAFNBGYzgphD_0i2RGrw9rTgAd3fgTVTgleyZjMBSClqnTCpLqXqdSVJtBxT8XsFBAv9YFQA0lyzVueDg9WeLLNFICFCvXOIx7rruwCzGzOKMM05X_Fzlj5zSgnWFvpDNjoBEih2Tk1pfElvkhO48EkO0EFiYYVzxSITWouw8HgVXdXk5jB61PoPk9jD6yOd4HAKepagrEPeR12IBiNE4JkYjeYwnFO6ppqWpdXLFOhnlSiY2CbrMNZ7SN3NCdgy8LbYZzxIBx_n6oYwOlEwpkjH1YRwshW9Ti5uU_eI2aSWK4ozG-BJJLjTnGr_zv7nK1-ZgVEWa09UCKC3zVBd7081GyJQZrHK0cNbt2gu79pxnTWX9yZ9OJ3NUFjOnZR_9zuEMZjKnMNKyZjNooJLYJzw0DUC9ZaW5ssj8Skbrd4cSuXNSUQhzkyt-NPEV4b-EKLsUZi3ZtnvUFSWaPeXErHBQmFEx-ShqrmGEA9ykgNEBvsMIPYQuCvDcQ17ohz7GDzO4h5Hvu54ffPFQMA_80Lu_P87g_8bUc-dhcPwEEa5QTQ?type=png)](https://mermaid.live/edit#pako:eNp1Ul1vmzAU_StXlvoWEDAoKQ-ToNWqqV0UTX3asgcHOwQFbGSbrVma_PbaEL6i5AEJn3PuPffrgFJOKIrQpuD_0i0WCt6eVgzg7g7eeAWveE9FBEvBSZ1SIQ0l63UmcLUdUPi9QoME_TEqAJILmqqcM3j92SJLdyQEt1cuvTFu2_bALMbM4oxTRlbsXOWPnJCCdoW-4M0OQyL4jopJrS-JKXJCdx6JJloIFnoYVzwSrhQvO49HzmRdXg6jR43PILk9jD7yOR6HwLPgdQVxH3ktFiB2xzGxO5LH3oTyeqppaWqdXLFORrmSiU3iXuYaT-mbPiEzBtYW24xn6YJlff2QWgcllRJnVH5oB0N5t6nFTcp8cZu04kVxRmPvEkkuNOcav7O_uczX-mBkhZvTVRykEnmqir3uZsNFSjVWWYpb63bthVl7zrKmsv7kT6eTPiqD6dMyj37naIYykRMUKVHTGdJQic0THZoGkNrSUl9ZpH8FJfW7RbDYWSkvuL7JFTvq-AqzX5yXXQq9lmzbPeqKYEWfcqxXOCj0qKh45DVTKPL8eZMCRQf0jiL3IbTdwJs7rhP6oe95DzO0R5Hv244ffHHcYB74oXN_f5yh_42pY8_D4PgJEwFQUg)
 ### kafka data flow
 1. a producer publishes an event to a topic.
 2. the broker receives the event and writes it to the appropriate partition.
 3. replicas copy the data across brokers.
 4. consumers read events from the partition log.
-5. applications process the events and update downstream systems.
+5. applications process the events and update **downstream** systems.
 ### core components
 - **producer:** publishes events.
 - **broker:** a single Kafka server node that stores partitions and serves client requests. 
@@ -76,7 +40,7 @@ flowchart TD
 	**within a group, only a consumer at a time can process from a partition!!**
 - **segment:** partitions are stored on disk as a series of segment files (`.log` data file + `.index` offset-to-physical-position index). Once a segment reaches `segment.bytes` (default 1GB) or `segment.ms`, it closes and a new active segment opens.
 - **replication factor (RF):** number of copies of each partition across distinct brokers. An RF of 3 means 1 leader replica and 2 follower replicas.
-
+![[Pasted image 20261110123429.png]]
 ### producers
 producers do not publish events over the network one by one. 
 they send an internal record accumulator buffer and send messages in batches.
