@@ -22,49 +22,63 @@
             }
           },
           {
-            "id": "f92dc92975080221",
+            "id": "a0e64991ddd5700a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_data_engineering/01_spark/Untitled.md",
+                "file": "03_data_engineering/02_kafka/delivery_guarantees_and_failure_modes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "delivery_guarantees_and_failure_modes"
             }
           },
           {
-            "id": "54f08f0e5deb36f1",
+            "id": "79af00d13175d8e9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_data_engineering/01_spark/join strategies.md",
+                "file": "03_data_engineering/02_kafka/kafka fundamentals.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "join strategies"
+              "title": "kafka fundamentals"
             }
           },
           {
-            "id": "90345a274081b603",
+            "id": "8a9d161eb2991d09",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_data_engineering/01_spark/window functions.md",
+                "file": "03_data_engineering/02_kafka/kafka vs traditional messaging architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "window functions"
+              "title": "kafka vs traditional messaging architecture"
+            }
+          },
+          {
+            "id": "96a77a8c0c7c7ef7",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "03_data_engineering/02_kafka/kafka fundamentals.md",
+                "bFile": "03_data_engineering/02_kafka/kafka fundamentals.md",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: kafka fundamentals  (Working Tree)"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -126,8 +140,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 301.75390625,
-    "collapsed": true
+    "width": 301.75390625
   },
   "right": {
     "id": "030396a5b6347305",
@@ -239,8 +252,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -255,19 +267,24 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "90345a274081b603",
+  "active": "96a77a8c0c7c7ef7",
   "lastOpenFiles": [
-    "03_data_engineering/01_spark/join strategies.md",
-    "03_data_engineering/01_spark/Untitled.md",
-    "03_data_engineering/01_spark/partitioning.md",
+    "03_data_engineering/02_kafka/kafka vs traditional messaging architecture.md",
+    "03_data_engineering/02_kafka/why not kafka?.md",
+    "03_data_engineering/02_kafka/kafka fundamentals.md",
+    "03_data_engineering/02_kafka/delivery_guarantees_and_failure_modes.md",
     "00_inbox/ToDo.md",
+    "03_data_engineering/01_spark/00_spark_basics.md",
+    "03_data_engineering/01_spark/Untitled.md",
+    "03_data_engineering/01_spark/window functions.md",
+    "03_data_engineering/02_kafka",
+    "03_data_engineering/01_spark/join strategies.md",
+    "03_data_engineering/01_spark/partitioning.md",
     "03_data_engineering/01_spark/salting hot keys.md",
     "03_data_engineering/01_spark/data skew.md",
     "03_data_engineering/01_spark/skew aware join or aggregation techniques.md",
     "03_data_engineering/01_spark/pre-aggregating before shuffle.md",
-    "03_data_engineering/01_spark/window functions.md",
     "notebooks/airport_flight_operations/airport_flight_operations.md",
-    "03_data_engineering/01_spark/00_spark_basics.md",
     "03_data_engineering/01_spark/00 spark architecture and topology.md",
     "01_python/01_pyspark/collect() vs take() vs show().md",
     "notebooks/airport_flight_operations/flight_operations_spark_basics.ipynb",
@@ -290,11 +307,6 @@
     "06_geospatial/geometry types and validity.md.bak",
     "06_geospatial/coordinate reference systems (CRS).md.bak",
     "05_ai/qdrant.md.bak",
-    "05_ai/ollama.md.bak",
-    "03_data_engineering/01_spark/salting hot keys.cleaned.md",
-    "README.md",
-    "agents/proteus-learning-atlas -  create_study_plan.md",
-    "02_algorithms_and_data_structures/algorithmic complexity O(N).md",
     "images/latitude_longitude.png",
     "images/skip_list.png",
     "images/langfuse.png",
