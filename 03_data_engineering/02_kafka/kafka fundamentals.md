@@ -40,7 +40,9 @@ in a kafka cluster:
 	**within a group, only a consumer at a time can process from a partition!!**
 - **segment:** partitions are stored on disk as a series of segment files (`.log` data file + `.index` offset-to-physical-position index). Once a segment reaches `segment.bytes` (default 1GB) or `segment.ms`, it closes and a new active segment opens.
 - **replication factor (RF):** number of copies of each partition across distinct brokers. An RF of 3 means 1 leader replica and 2 follower replicas.
-![[Pasted image 20261110123429.png]]
+
+<img src="../../images/mermaid_kafka_partition.png" width="398" alt="kafka partitions">
+
 ### producers
 producers do not publish events over the network one by one. 
 they send an internal record accumulator buffer and send messages in batches.
