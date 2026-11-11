@@ -22,31 +22,17 @@
             }
           },
           {
-            "id": "a0e64991ddd5700a",
+            "id": "4941814f8792076a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_data_engineering/02_kafka/delivery_guarantees_and_failure_modes.md",
+                "file": "03_data_engineering/01_spark/apache structured_streaming/structured streaming basics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "delivery_guarantees_and_failure_modes"
-            }
-          },
-          {
-            "id": "175aefc0cdda52cb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_data_engineering/02_kafka/kafka fundamentals.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "kafka fundamentals"
+              "title": "structured streaming basics"
             }
           }
         ],
@@ -112,8 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 301.75390625,
-    "collapsed": true
+    "width": 301.75390625
   },
   "right": {
     "id": "030396a5b6347305",
@@ -225,8 +210,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -241,11 +225,20 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "a0e64991ddd5700a",
+  "active": "4941814f8792076a",
   "lastOpenFiles": [
+    "00_inbox/ToDo.md",
+    "03_data_engineering/01_spark/apache structured_streaming/structured streaming basics.md",
+    "03_data_engineering/01_spark/apache structured_streaming/event time windows and state.md",
+    "Untitled.md",
+    "03_data_engineering/01_spark/apache structured_streaming/watermarks and late data.md",
+    "03_data_engineering/01_spark/apache structured_streaming/checkpoints and recovery.md",
+    "03_data_engineering/01_spark/window functions.md",
+    "Untitled 1.md",
+    "03_data_engineering/01_spark/apache structured_streaming",
+    "03_data_engineering/02_kafka/delivery_guarantees_and_failure_modes.md",
     "03_data_engineering/02_kafka/practical_scenarios_and_recall.md",
     "03_data_engineering/02_kafka/kafka fundamentals.md",
-    "03_data_engineering/02_kafka/delivery_guarantees_and_failure_modes.md",
     "03_data_engineering/vector databases.md",
     "02_algorithms_and_data_structures/algorithmic complexity O(N).md",
     "02_algorithms_and_data_structures/dynamic programming.md",
@@ -260,22 +253,14 @@
     "03_data_engineering/01_spark/data skew.md",
     "03_data_engineering/02_kafka/kafka vs traditional messaging architecture.md",
     "03_data_engineering/02_kafka/why not kafka?.md",
-    "00_inbox/ToDo.md",
-    "03_data_engineering/01_spark/window functions.md",
     "03_data_engineering/02_kafka",
     "03_data_engineering/01_spark/salting hot keys.md",
     "03_data_engineering/01_spark/skew aware join or aggregation techniques.md",
     "03_data_engineering/01_spark/pre-aggregating before shuffle.md",
     "notebooks/airport_flight_operations/airport_flight_operations.md",
-    "01_python/01_pyspark/collect() vs take() vs show().md",
     "notebooks/airport_flight_operations/flight_operations_spark_basics.ipynb",
     "notebooks/airport_flight_operations",
-    "notebooks/rag_stack_skeleton_exec.ipynb.md",
-    "notebooks/corporate_rag/corporate_rag.md",
     "images/cosine_similarity_computation.png",
-    "05_ai/qdrant.md",
-    "05_ai/ollama.md",
-    "05_ai/langgraph.md",
     "images/spark_architecture.png",
     "notebooks/corporate_rag/corporate_rag.md.bak",
     "agents/proteus-learning-atlas -  todo audit from the obsidian graph.md.bak",
@@ -283,7 +268,6 @@
     "README.md.bak",
     "06_geospatial/geometry types and validity.md.bak",
     "06_geospatial/coordinate reference systems (CRS).md.bak",
-    "05_ai/qdrant.md.bak",
     "images/latitude_longitude.png",
     "images/skip_list.png",
     "images/langfuse.png",
