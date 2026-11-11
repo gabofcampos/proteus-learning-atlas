@@ -46,8 +46,6 @@ in a kafka cluster:
 ### producers
 producers do not publish events over the network one by one. 
 they send an internal record accumulator buffer and send messages in batches.
-### consumers
-
 
 ## 2. anatomy of a kafka record
 
@@ -174,6 +172,21 @@ during the rebalancing process:
 - ***cooperative sticky rebalance (modern protocols)*** reduce this impact significantly. instead of stopping all consumers, only the partitions being reassigned are revoked. consumers not affected by the change continue processing without interruption. 
 	- ex.: cooperative rebalancing aka incremental cooperative rebalancing
 
+
+
+## 6. cluster and partition replicas
+kafka implements master slave architecture when it comes to handling multiple brokers → **it creates a cluster of multiple brokers with the same partitions and one of the partitions is the lead partition.**
+
+**why?** fault tolerance → one broker fails, we have back up.
+**how  many brokers?** replication factor.
+	if your RF is 3 → cluster is resilient up to 2 failures
+> [!info] create as many brokers as the RF → kafka does not create the topic until the number of brokers  == the RF.
+
+in this architecture:
+- Kafka declares one of the partitions as the **partition leader.**
+- the producer delivers the events to this partition only and then the leader synchronizes with all the other brokers.
+- consumers also poll from the leader maintaining the synchronization of offset increment.
+- Kafka creates different partition leaders in different brokers **distributing partition-leading to multiple brokers**.
 
 ## related
 - [[delivery_guarantees_and_failure_modes]]

@@ -36,77 +36,7 @@
             }
           },
           {
-            "id": "9db7dc6a610c1141",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_data_engineering/01_spark/data skew.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "data skew"
-            }
-          },
-          {
-            "id": "2f993e56cc6dc13d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_data_engineering/01_spark/00 spark architecture and topology.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "00 spark architecture and topology"
-            }
-          },
-          {
-            "id": "830dc02cd764d963",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_data_engineering/01_spark/00_spark_basics.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "00_spark_basics"
-            }
-          },
-          {
-            "id": "b0ab48be18ac790b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_data_engineering/01_spark/partitioning.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "partitioning"
-            }
-          },
-          {
-            "id": "269c25cc508b230f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_data_engineering/01_spark/interview questions.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "interview questions"
-            }
-          },
-          {
-            "id": "79af00d13175d8e9",
+            "id": "175aefc0cdda52cb",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -120,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -295,7 +225,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -310,16 +241,23 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "269c25cc508b230f",
+  "active": "a0e64991ddd5700a",
   "lastOpenFiles": [
+    "03_data_engineering/02_kafka/practical_scenarios_and_recall.md",
+    "03_data_engineering/02_kafka/kafka fundamentals.md",
+    "03_data_engineering/02_kafka/delivery_guarantees_and_failure_modes.md",
+    "03_data_engineering/vector databases.md",
+    "02_algorithms_and_data_structures/algorithmic complexity O(N).md",
+    "02_algorithms_and_data_structures/dynamic programming.md",
+    "images/mermaid_kafka_partition.png",
+    "images/mermaid-diagram-2026-11-10-125005.png",
+    "Pasted image 20261110123429.png",
     "03_data_engineering/01_spark/partitioning.md",
-    "03_data_engineering/01_spark/interview questions.md",
     "03_data_engineering/01_spark/00_spark_basics.md",
     "03_data_engineering/01_spark/00 spark architecture and topology.md",
-    "03_data_engineering/02_kafka/kafka fundamentals.md",
+    "03_data_engineering/01_spark/interview questions.md",
     "03_data_engineering/01_spark/join strategies.md",
     "03_data_engineering/01_spark/data skew.md",
-    "03_data_engineering/02_kafka/delivery_guarantees_and_failure_modes.md",
     "03_data_engineering/02_kafka/kafka vs traditional messaging architecture.md",
     "03_data_engineering/02_kafka/why not kafka?.md",
     "00_inbox/ToDo.md",
@@ -332,17 +270,13 @@
     "01_python/01_pyspark/collect() vs take() vs show().md",
     "notebooks/airport_flight_operations/flight_operations_spark_basics.ipynb",
     "notebooks/airport_flight_operations",
-    "03_data_engineering/vector databases.md",
     "notebooks/rag_stack_skeleton_exec.ipynb.md",
     "notebooks/corporate_rag/corporate_rag.md",
     "images/cosine_similarity_computation.png",
     "05_ai/qdrant.md",
     "05_ai/ollama.md",
     "05_ai/langgraph.md",
-    "05_ai/langfuse.md",
     "images/spark_architecture.png",
-    "agents/proteus-learning-atlas -  plan_study_session.md",
-    "02_algorithms_and_data_structures/dynamic programming.md",
     "notebooks/corporate_rag/corporate_rag.md.bak",
     "agents/proteus-learning-atlas -  todo audit from the obsidian graph.md.bak",
     "agents/proteus-learning-atlas -  create_study_plan.md.bak",
