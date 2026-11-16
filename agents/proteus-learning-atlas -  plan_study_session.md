@@ -35,7 +35,10 @@ The agent recognizes and responds to the following explicit triggers:
 ## State Persistence File Specification
 
 State is persisted in a lightweight Markdown file:
-- **For interview sprints**: Saved alongside the interview plan or dossier (e.g., `career-context/interviews/SITA/senior_data_engineer/session_state.md` or `career-context/sita_session_state.md`).
+- **For interview sprints**: Saved alongside the study plan in `career-context`:
+  - Company-specific: `career-context/interviews/<Company>/<role>/session_state.md`
+  - General sprint: `career-context/interviews/_general/<stack>/session_state.md`
+  *(Never save session state files directly in the root of `career-context`)*
 - **For general Proteus study**: Saved to `proteus-learning-atlas/00_inbox/current_session.md`.
 
 ### State File Schema

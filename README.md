@@ -95,4 +95,10 @@ It should make it easier for its owner (ME) to understand what they know, identi
 
 ## Agents / skills
 
-- [`agents/proteus-learning-atlas -  todo audit from the obsidian graph.md`](agents/proteus-learning-atlas%20-%20%20todo%20audit%20from%20the%20obsidian%20graph.md) — reconstructs the Obsidian graph from the vault's markdown files (empty stub notes + `[[links]]` with no matching note) and folds anything missing into `00_inbox/ToDo.md`. Run it by asking your agent to audit the vault for unfinished notes.
+The `agents/` directory defines specialized agent workflows and skills that assist with maintaining the vault and preparing for technical milestones:
+
+- [`agents/proteus-learning-atlas -  todo audit from the obsidian graph.md`](agents/proteus-learning-atlas%20-%20%20todo%20audit%20from%20the%20obsidian%20graph.md) — Reconstructs the Obsidian graph from the vault's markdown files (empty stub notes + `[[links]]` with no matching note) and folds anything missing into `00_inbox/ToDo.md`.
+- [`agents/proteus-learning-atlas -  create_study_plan.md`](agents/proteus-learning-atlas%20-%20%20create_study_plan.md) (`interview-prep-planner`) — Builds realistic, time-boxed interview study schedules from a target tech stack, timeline, and existing Proteus notes. Outputs to `career-context/interviews/<Company>/<role>/study_plan.md`.
+- [`agents/proteus-learning-atlas -  plan_study_session.md`](agents/proteus-learning-atlas%20-%20%20plan_study_session.md) (`study-session-planner`) — Breaks a macro study day into hands-on 2–3 hour session blueprints with checkpointed pause/resume state tracking in `session_state.md`.
+
+*(Both planners are registered globally in `~/.agents/skills/` for CLI agents.)*

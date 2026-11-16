@@ -38,7 +38,10 @@ By default generate a concise study plan with:
 - `Round 2 / deferred` section
 - 3–5 next actions
 
-When working in a repository, offer to save the plan as `interview-prep/<company-or-role>/study-plan.md` or an existing project-appropriate location. Only create files after the user requests it or authorizes changes. Follow existing repository conventions and `AGENTS.md`.
+When working in a repository or interview context:
+- For company-specific interview prep: save the plan to `career-context/interviews/<Company>/<role>/study_plan.md`.
+- For general stack sprints (not tied to a specific company): save to `career-context/interviews/_general/<stack>/study_plan.md`.
+- Never save study plans directly in the root of `career-context`. Only create files after the user requests it or authorizes changes. Follow repository conventions and `AGENTS.md`.
 
 ## Tutoring rules
 - Prefer guiding questions and hints before solutions, unless solutions are requested.
