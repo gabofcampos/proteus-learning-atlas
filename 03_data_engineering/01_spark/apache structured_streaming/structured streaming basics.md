@@ -26,29 +26,27 @@ in pyspark
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import explode, split
 
-spark = SparkSession.builder \
-    .appName("StructuredStreamingBasics") \
-    .getOrCreate()
+spark = SparkSession.builder.appName("StructuredStreamingBasics").getOrCreate()
 
 # stream input source
-lines = spark.readStream \
-    .format("socket") \
-    .option("host", "localhost") \
-    .option("port", 9999) \
+lines = (
+    spark.readStream.format("socket")
+    .option("host", "localhost")
+    .option("port", 9999)
     .load()
+)
 
 # transform
-words = lines.select(
-   explode(split(lines.value, " ")).alias("word")
-)
+words = lines.select(explode(split(lines.value, " ")).alias("word"))
 word_counts = words.groupBy("word").count()
 
 # write stream (sink & trigger)
-query = word_counts.writeStream \
-    .outputMode("complete") \
-    .format("console") \
-    .trigger(processingTime="5 seconds") \
+query = (
+    word_counts.writeStream.outputMode("complete")
+    .format("console")
+    .trigger(processingTime="5 seconds")
     .start()
+)
 
 # away Termination
 query.awaitTermination()
@@ -89,7 +87,12 @@ writeStream` configures:
 - `start()`: this is what makes the query run on the stream. without it, it is just a plan. Returns a `StreamingQuery`.
 
 ##### output models
-<!-- TODO: more indepth dive -->
+- **append:** only newly added rows since the last trigger are written out.
+	- valid only on queries with no aggregations, or aggregations with watermarks ([[watermarks and late data]]).
+- **complete:** the entire updated result table is written out on every trigger.
+	- requires an aggregation (cannot be used on simple row-by-row transforms).
+- **update:** only rows that changed or were newly added in the result table since the last trigger are written out.
+	- if there are no aggregations, behaves similarly to `append`.
 
 ## related
-<!-- TODO -->
+- [[kafka fundamentals]]

@@ -17,3 +17,4 @@ topics, subjects, concepts to research, learn or pullish:
 	- [[RAG]]
 	- [[LLM Agents]]
 	- [[LLM Observability]]
+	- [[time and space complexity (Big-O)]]
